@@ -2,7 +2,8 @@
 tmp/
 
 *.svg
-
+*.jpg
 *.pdf
 
 imgs/monster-icons/
+imgs/
