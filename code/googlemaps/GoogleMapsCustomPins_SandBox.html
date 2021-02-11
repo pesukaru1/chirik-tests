@@ -27,41 +27,32 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-          center: new google.maps.LatLng(-33.91722, 151.23064),
-          zoom: 16,
+          center: new google.maps.LatLng(55.9196, 37.9923),
+          zoom: 17,
         });
         const iconBase =
-          "../../imgs/monster-icons/SVG/";
+          "../../svg/";
         const icons = {
-          parking: {
-            icon: iconBase + "kidaha-01.svg",
-          },
-          library: {
-            icon: iconBase + "kidaha-02.svg",
-          },
-          info: {
-            icon: iconBase + "kidaha-03.svg",
-          },
-              tree:{
-            icon: iconBase + "tree.svg",
+          chirik: {
+            icon: iconBase + "chirik-pin.svg",
           }
         };
         const features = [
           {
-            position: new google.maps.LatLng(-33.91721, 151.2263),
-            type: "info",
+            position: new google.maps.LatLng(55.9196, 37.9923),
+            type: "chirik",
           },
           {
-            position: new google.maps.LatLng(-33.91539, 151.2282),
-            type: "info",
+            position: new google.maps.LatLng(55.9187, 37.9948),
+            type: "chirik",
           },
           {
-            position: new google.maps.LatLng(-33.91747, 151.22912),
-            type: "info",
+            position: new google.maps.LatLng(55.9192, 37.9887),
+            type: "chirik",
           },
           {
             position: new google.maps.LatLng(-33.9191, 151.22907),
-            type: "info",
+            type: "chirik",
           },
           {
             position: new google.maps.LatLng(-33.91725, 151.23011),

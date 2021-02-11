@@ -12,6 +12,135 @@
     <p>
     Чирик-чирик
     </p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.424564870511!2d37.99093832823089!3d55.91965545651473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b52d2823321799%3A0xce2927e41ce8b54e!2z0YPQuy4g0JrQvtC80LDRgNC-0LLQsCwgMSwg0KnRkdC70LrQvtCy0L4sINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDE0MTEwMA!5e0!3m2!1sru!2sru!4v1612995015526!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+  <div class="map"></div>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: new google.maps.LatLng(55.9196, 37.9923),
+          zoom: 17,
+        });
+        const iconBase =
+          "../../svg/";
+        const icons = {
+          chirik: {
+            icon: iconBase + "chirik-pin.svg",
+          }
+        };
+        const features = [
+          {
+            position: new google.maps.LatLng(55.9196, 37.9923),
+            type: "chirik",
+          },
+          {
+            position: new google.maps.LatLng(55.9187, 37.9948),
+            type: "chirik",
+          },
+          {
+            position: new google.maps.LatLng(55.9192, 37.9887),
+            type: "chirik",
+          },
+          {
+            position: new google.maps.LatLng(-33.9191, 151.22907),
+            type: "chirik",
+          },
+          {
+            position: new google.maps.LatLng(-33.91725, 151.23011),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91872, 151.23089),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91784, 151.23094),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91682, 151.23149),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.9179, 151.23463),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.91666, 151.23468),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(-33.916988, 151.23364),
+            type: "info",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91662347903106,
+              151.22879464019775
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.916365282092855,
+              151.22937399734496
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91665018901448,
+              151.2282474695587
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.919543720969806,
+              151.23112279762267
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91608037421864,
+              151.23288232673644
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91851096391805,
+              151.2344058214569
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91818154739766,
+              151.2346203981781
+            ),
+            type: "tree",
+          },
+          {
+            position: new google.maps.LatLng(
+              -33.91727341958453,
+              151.23348314155578
+            ),
+            type: "library",
+          },
+        ];
+
+        // Create markers.
+        for (let i = 0; i < features.length; i++) {
+          const marker = new google.maps.Marker({
+            position: features[i].position,
+            icon: icons[features[i].type].icon,
+            map: map,
+          });
+        }
+      }
+    </script>
 </body>
 </html>
