@@ -14,7 +14,7 @@ p {
 }
 
 #map {
-    margin: auto;
+    /* margin: auto; */
     height: 500px;
     width: 100%;
    
