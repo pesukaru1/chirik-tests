@@ -1,146 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chirik Tests</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" href="css/style.css">
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjG-nkpeIWWHcYOuzCa983v5rsWODhonU&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: new google.maps.LatLng(55.9196, 37.9923),
+                zoom: 17,
+            });
+            const iconBase =
+                "../../svg/";
+            const icons = {
+                chirik: {
+                    icon: iconBase + "chirik-pin.svg",
+                }
+            };
+            const features = [{
+                    position: new google.maps.LatLng(55.9196, 37.9923),
+                    type: "chirik",
+                },
+                {
+                    position: new google.maps.LatLng(55.9187, 37.9948),
+                    type: "chirik",
+                },
+                {
+                    position: new google.maps.LatLng(55.9192, 37.9887),
+                    type: "chirik",
+                },
+                {
+                    position: new google.maps.LatLng(-33.9191, 151.22907),
+                    type: "chirik",
+                },
+                {
+                    position: new google.maps.LatLng(-33.91725, 151.23011),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.91872, 151.23089),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.91784, 151.23094),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.91682, 151.23149),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.9179, 151.23463),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.91666, 151.23468),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(-33.916988, 151.23364),
+                    type: "info",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91662347903106,
+                        151.22879464019775
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.916365282092855,
+                        151.22937399734496
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91665018901448,
+                        151.2282474695587
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.919543720969806,
+                        151.23112279762267
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91608037421864,
+                        151.23288232673644
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91851096391805,
+                        151.2344058214569
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91818154739766,
+                        151.2346203981781
+                    ),
+                    type: "tree",
+                },
+                {
+                    position: new google.maps.LatLng(
+                        -33.91727341958453,
+                        151.23348314155578
+                    ),
+                    type: "library",
+                },
+            ];
+
+            // Create markers.
+            for (let i = 0; i < features.length; i++) {
+                const marker = new google.maps.Marker({
+                    position: features[i].position,
+                    icon: icons[features[i].type].icon,
+                    map: map,
+                });
+            }
+        }
+    </script>
 </head>
+
 <body>
     <p>
-    Чирик-чирик
+        Чирик-чирик
     </p>
 
-  <div class="map"></div>
-    <script>
-      let map;
+    <div class="outer"><div id="map"></div></div>
 
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: new google.maps.LatLng(55.9196, 37.9923),
-          zoom: 17,
-        });
-        const iconBase =
-          "../../svg/";
-        const icons = {
-          chirik: {
-            icon: iconBase + "chirik-pin.svg",
-          }
-        };
-        const features = [
-          {
-            position: new google.maps.LatLng(55.9196, 37.9923),
-            type: "chirik",
-          },
-          {
-            position: new google.maps.LatLng(55.9187, 37.9948),
-            type: "chirik",
-          },
-          {
-            position: new google.maps.LatLng(55.9192, 37.9887),
-            type: "chirik",
-          },
-          {
-            position: new google.maps.LatLng(-33.9191, 151.22907),
-            type: "chirik",
-          },
-          {
-            position: new google.maps.LatLng(-33.91725, 151.23011),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.91872, 151.23089),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.91784, 151.23094),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.91682, 151.23149),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.9179, 151.23463),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.91666, 151.23468),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(-33.916988, 151.23364),
-            type: "info",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91662347903106,
-              151.22879464019775
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.916365282092855,
-              151.22937399734496
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91665018901448,
-              151.2282474695587
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.919543720969806,
-              151.23112279762267
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91608037421864,
-              151.23288232673644
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91851096391805,
-              151.2344058214569
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91818154739766,
-              151.2346203981781
-            ),
-            type: "tree",
-          },
-          {
-            position: new google.maps.LatLng(
-              -33.91727341958453,
-              151.23348314155578
-            ),
-            type: "library",
-          },
-        ];
-
-        // Create markers.
-        for (let i = 0; i < features.length; i++) {
-          const marker = new google.maps.Marker({
-            position: features[i].position,
-            icon: icons[features[i].type].icon,
-            map: map,
-          });
-        }
-      }
-    </script>
 </body>
+
 </html>

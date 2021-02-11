@@ -12,3 +12,18 @@ p {
     font-size: 40px;
     color: rgb(57, 128, 235);
 }
+
+#map {
+    margin: auto;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: 10em;
+}
+
+.outer {
+    position: relative;
+    height: 1200px;
+    width: 100%;
+}
