@@ -25,3 +25,19 @@ p {
     height: 1200px;
     width: 100%;
 } */
+
+.centered-link {
+margin: auto;
+color: green;
+width: 200px;
+padding-top: 40px;
+}
+
+.paymentForm {
+    width: 500px;
+    margin: auto;
+}
+
+.tinkoff-form {
+    margin: auto;
+}
