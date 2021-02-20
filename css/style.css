@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(179, 236, 255);
 }
 
 h1 {
@@ -7,37 +7,108 @@ h1 {
     text-align: center;
 }
 
-p {
+/* p {
     font-family: verdana;
     font-size: 40px;
     color: rgb(57, 128, 235);
-}
+} */
 
 #map {
     /* margin: auto; */
     height: 500px;
     width: 100%;
-   
+
 }
 
-/* .outer {
-    position: relative;
-    height: 1200px;
-    width: 100%;
-} */
-
 .centered-link {
-margin: auto;
-color: green;
-width: 200px;
-padding-top: 40px;
+    margin: auto;
+    color: green;
+    width: 200px;
+    padding-top: 40px;
 }
 
 .paymentForm {
-    width: 500px;
+    /* width: 500px; */
     margin: auto;
 }
 
 .tinkoff-form {
     margin: auto;
+    max-width: 300px;
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
+    border: none;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .3);
+    font-size: 19px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: 25px;
+    /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; */
+}
+
+.sbmt {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    background-color: #9B51E0;
+    padding-bottom: 8px;
+}
+
+.sbmt:hover {
+    color: #fff;
+    background-color: #6a2fa1;
+}
+
+.proposal {
+    line-height: 1.2;
+    max-width: 700px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* color:green; */
+    /* margin-top: 100px;
+    margin-bottom: 50px; */
+    margin: 60px auto 40px;
+}
+
+p {
+    font-size: 40px;
+    color: #57c29c;
+    text-align: center;
+}
+
+.dveshtuki {
+    color: #389273;
+     font-weight: 900;
+}
+
+.tinkoffPayRow {
+    margin-bottom: 9px;
+}
+
+.logo {
+    max-width: 200px;
+    height: 150px;
+    margin: 50px auto 20px;
+    background-image: url("../imgs/logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
