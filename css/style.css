@@ -85,7 +85,7 @@ input {
     /* color:green; */
     /* margin-top: 100px;
     margin-bottom: 50px; */
-    margin: 60px auto 40px;
+    margin: 40px auto 40px;
 }
 
 p {
@@ -104,7 +104,7 @@ p {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 150px;
     height: 150px;
     margin: 50px auto 20px;
     background-image: url("../svg/logo.svg");
