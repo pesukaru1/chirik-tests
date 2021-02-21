@@ -30,6 +30,7 @@ h1 {
 .paymentForm {
     /* width: 500px; */
     margin: auto;
+    margin-bottom: 40px;
 }
 
 .tinkoff-form {
