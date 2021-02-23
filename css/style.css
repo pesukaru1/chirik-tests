@@ -1,5 +1,9 @@
 body {
     background-color: rgb(196, 240, 255);
+    background-image: url("../backs/1.png"),url("../backs/2.png");
+    background-repeat: no-repeat;
+    background-position: top 10% left 10%, right 200%;
+    /* background-size: 30%, 30%; */
 }
 
 h1 {
