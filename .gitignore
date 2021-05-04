@@ -3,7 +3,9 @@ tmp/
 
 *.jpg
 *.pdf
+*.zip
 
 imgs/monster-icons/
 imgs/
 node_modules/
+assets/
